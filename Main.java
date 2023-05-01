@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Main {
 
@@ -6,16 +6,12 @@ public class Main {
         String name;
         int age;
         String power;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What is your heroes name?");
-        name = scanner.next();
-        System.out.println("What is your heroes age?");
-        age = scanner.nextInt();
-        System.out.println("What is your heroes power?");
-        power = scanner.next();
-        Hero hero1 = new Hero(name, age, power);
-        System.out.println(hero1.name);
-        System.out.println(hero1.age);
-        System.out.println(hero1.power);
+        name = JOptionPane.showInputDialog("What is your heroes name?");
+        age = Integer.parseInt("What is your heroes age?");
+        power = JOptionPane.showInputDialog("What is your heroes power?");
+        JOptionPane.showMessageDialog(null, "Your hero is called" + name);
+        JOptionPane.showMessageDialog(null, "Your hero is " + age + " years old");
+        JOptionPane.showMessageDialog(null,"Your heroes power is" + power);
+
     }
 }
